@@ -1,7 +1,17 @@
 html {
   box-sizing: border-box;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
+.five {
+    /* Your existing styles */
+    width: 100%;
+    min-height: 100%;
+}
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -14,7 +24,6 @@ body {
 .container {
   height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
   text-align: center;
   visibility: hidden;
@@ -26,6 +35,18 @@ body {
   position: absolute;
   right: 0;
   top: 20vh;
+}
+
+.container > .five {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0vh;
+  }
+
+
+p {
+    margin : 5px;
 }
 
 .one {
@@ -41,13 +62,47 @@ body {
   font-size: 3rem;
 }
 
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 15px;
+  }
+
+.three .box {
+    position: relative;
+}
+
+.quote1 {
+    visibility: hidden;
+}
+
+.quote2 {
+    visibility: hidden;
+}
+
+.box .btn-3d {
+    background-color: rgb(21, 161, 237);
+    border-radius: 3px;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    position: relative;
+    
+}
+
+
+
+
 .four .text-box {
   border: 3px solid #aaa;
   border-radius: 5px;
   margin: 0 auto;
-  padding: 10px;
+  padding: .5rem 1rem;
   position: relative;
-  width: 600px;
+  width: 200px;
 }
 
 .text-box p {
@@ -69,31 +124,59 @@ body {
   right: 5px;
 }
 
-.five p {
-  font-size: 2rem;
-  left: 0;
-  position: absolute;
-  right: 0;
-}
 
-.idea-3 strong {
-  border-radius: 3px;
-  display: inline-block;
-  padding: 3px 5px;
-}
+  .heart {
+    position: relative;
+    width: 80px;
+    height: 90px;
+    margin: 15px;
+    padding-right: 15px;
+  }
+  
+  .heart:before, .heart:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+  }
+  
+  .heart:before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
 
-.five .idea-5 {
-  font-size: 4rem;
-}
+.five {
+    top:-20wh;
+    bottom: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh;
+    display: flex;           /* Enables flexbox layout */
+    flex-direction: row;     /* Default - displays items left-to-right */
+    gap: 10px;   
+    background: pink;
+    align-items: center;  
+    justify-content: center;           /* Space between images */    /* Adds horizontal scroll if needed */
+    border: 2px dashed red;
+  }
+  
 
-.idea-5 span, .idea-6 span, .wish-hbd span {
-  display: inline-block;
-}
-
-.idea-6 span{
-  font-size: 15rem;
-}
-
+  .five  img {
+    display: inline-block;
+  height: 350px;
+  max-width: 100%;
+  object-fit: cover;
+  /* height: auto; */
+  }
 
 .six {
   position: relative;
